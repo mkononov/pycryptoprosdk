@@ -15,7 +15,7 @@ RUN apt-get update && \
 COPY ./compose/cpcsp /cpcsp
 RUN bash /cpcsp/install.sh
 
-RUN cd /cpcsp && alien -kci lsb-cprocsp-devel-4.0.0-4.noarch.rpm cprocsp-pki-2.0.0-amd64-cades.rpm
+RUN cd /cpcsp && alien -kci lsb-cprocsp-devel-*.noarch.rpm cprocsp-pki-*-amd64-cades.rpm
 RUN ln -s /opt/cprocsp/lib/amd64/libcades.so.2.0.0 /opt/cprocsp/lib/amd64/libcades.so
 
 COPY ./compose/certs /certs
