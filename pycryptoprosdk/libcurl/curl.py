@@ -24,6 +24,7 @@ lib = ctypes.CDLL(os.environ.get('LIBCURL') or '/opt/cprocsp/lib/amd64/libcpcurl
 
 def write_function(cont, size, nmemb, userp):
     userp[0] = cont
+    print(cont)
     return size * nmemb
 
 
