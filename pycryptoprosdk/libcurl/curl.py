@@ -169,6 +169,7 @@ class Curl:
         self._set_opt(const.CURLOPT_WRITEDATA, ctypes.byref(s))
 
         self._perform()
+        print(111, s.value)
 
         if form:
             form.free()
